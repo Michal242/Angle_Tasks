@@ -1,10 +1,12 @@
 package angle;
 
-public class MainAngle {
+public class MainAngleZad1_3 {
 
     public static void main(String[] args) {
 
-        Angle angle = new Angle(11);
+        Angle angle = new Angle(90);
+        Angle angle2 = new Angle(180,15,1);
+
         double angleValueRad = angle.getAngle();
         System.out.println("K¹t w radianach: " + angle.radian());
         System.out.println("K¹t w stopniach: " + angle.degree());
@@ -17,6 +19,18 @@ public class MainAngle {
         System.out.printf("Cosecans(%.2f) = %.4f\n", angleValueRad, angle.getAngleCosecans());
 
         System.out.println(angle);
+
+        System.out.println("K¹t w radianach: " + angle2.radian());
+        System.out.println("K¹t w stopniach: " + angle2.degree());
+        System.out.println("\nWartoœci wybranych funkcji trygonometrycznych.\n");
+        System.out.printf("Sinus(%.2f) = %.4f\n", angleValueRad, angle2.getAngleSinus());
+        System.out.printf("Cosinus(%.2f) = %.4f\n", angleValueRad, angle2.getAngleCosiunus());
+        System.out.printf("Tangens(%.2f) = %.4f\n", angleValueRad, angle2.getAngleTangens());
+        System.out.printf("Cotangens(%.2f) = %.4f\n", angleValueRad, angle2.getAngleCotangens());
+        System.out.printf("Secans(%.2f) = %.4f\n", angleValueRad, angle2.getAngleSecans());
+        System.out.printf("Cosecans(%.2f) = %.4f\n", angleValueRad, angle2.getAngleCosecans());
+
+        System.out.println(angle2);
 
 
     }
