@@ -73,6 +73,12 @@ public class Angle {
 
     }
 
+    public Angle(double x, double y) {
+
+        double angleValue = Math.atan2(y, x);
+        this.x = angleValue >= 0 ? angleValue : angleValue + 2 * Math.PI;
+    }
+
     public double getAngle() {
         return x;
     }
@@ -134,6 +140,11 @@ public class Angle {
         x = Math.asin(1.0d / value);
     }
 
+    public void setOfPoint(double x, double y) {
+        double angleValue = Math.atan2(y, x);
+        this.x = angleValue >= 0 ? angleValue : angleValue + 2 * Math.PI;
+    }
+
     @Override
     public String toString() {
 
@@ -182,10 +193,81 @@ public class Angle {
         }
         return "K¹t = " + degreeFinal + "° " + minutesString + "' " + secondsString + "\"";
 
-                /*+"\n" +
-                "Angle in \" = " + ((Math.toDegrees(x) * 3600)) + "\n" +
-                degreeFinal;
-
-*/
     }
+
+    public static Angle valueOf(double x) {
+        return new Angle(x);
+
+    }
+
+    public static Angle valueOf(int degree, int minutes, int seconds) {
+
+        if (degree < 0 || degree > 360) {
+            throw new IllegalArgumentException("Podano z³¹ wartoœæ k¹ta. Podaj liczbê z zakresu 0-360!");
+        }
+        if (minutes < 0 || minutes > 60) {
+            throw new IllegalArgumentException("Podano z³¹ wartoœæ minut. Podaj liczbê z zakresu 0-60!");
+        }
+        if (seconds < 0 || seconds > 60) {
+            throw new IllegalArgumentException("Podano z³¹ wartoœæ sekund. Podaj liczbê z zakresu 0-60!");
+        }
+
+        double angleValue = Math.toRadians(degree + minutes / 60.0 + seconds / 3600.0);
+        return new Angle(angleValue);
+    }
+
+    public static Angle valueOf(int degree, int minutes) {
+
+        if (degree < 0 || degree > 360) {
+            throw new IllegalArgumentException("Podano z³¹ wartoœæ k¹ta. Podaj liczbê z zakresu 0-360!");
+        }
+        if (minutes < 0 || minutes > 60) {
+            throw new IllegalArgumentException("Podano z³¹ wartoœæ minut. Podaj liczbê z zakresu 0-60!");
+        }
+
+        double angleValue = Math.toRadians(degree + minutes / 60.0);
+        return new Angle(angleValue);
+
+    }
+
+    public static Angle valueOf(int degree) {
+
+        if (degree < 0 || degree > 360) {
+            throw new IllegalArgumentException("Podano z³¹ wartoœæ k¹ta. Podaj liczbê z zakresu 0-360!");
+        }
+
+        double angleValue = Math.toRadians(degree);
+        return new Angle(angleValue);
+    }
+
+    public static Angle valueOf(String angle) {
+
+        String strDegrees = "0";
+        String strMinutes = "0";
+        String strSeconds = "0";
+
+        strDegrees = angle.substring(0, angle.indexOf('°'));
+        strMinutes = angle.substring(angle.indexOf('°') + 1, angle.indexOf('\''));
+        strSeconds = angle.substring(angle.indexOf('\'') + 1, angle.indexOf('\"'));
+
+        double degrees = Double.parseDouble(strDegrees);
+        double minutes = Double.parseDouble(strMinutes);
+        double seconds = Double.parseDouble(strSeconds);
+
+        double angleValue = Math.toRadians(degrees + minutes / 60 + seconds / 3600);
+        return new Angle(angleValue);
+
+    }
+
+    public static Angle valueOf(double x, double y) {
+
+        double angleValue = Math.atan2(y, x);
+        double angleToReturn = angleValue >= 0 ? angleValue : angleValue + 2 * Math.PI;
+        return new Angle(angleToReturn);
+    }
+
+
 }
+
+
+
