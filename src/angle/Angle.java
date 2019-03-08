@@ -155,6 +155,37 @@ public class Angle {
         return new Angle(addedAngle);
     }
 
+    public Angle mult(int number) {
+        double multipliedAngle = x * number;
+        return new Angle(multipliedAngle);
+    }
+
+    public Angle mult(double number) {
+        double multipliedAngle = x * number;
+        return new Angle(multipliedAngle);
+    }
+
+    public Angle div(int number) {
+
+        double dividedAngle = x / number;
+        if (number == 0) {
+            throw new ArithmeticException("Próba dzielenia przez 0!!!");
+        }
+        return new Angle(dividedAngle);
+    }
+
+    public Angle div(double number) {
+
+        if (number == 0) {
+            throw new ArithmeticException("Próba dzielenia przez 0!!!");
+        }
+
+        double dividedAngle = x / number;
+
+        return new Angle(dividedAngle);
+    }
+
+
     @Override
     public String toString() {
 
