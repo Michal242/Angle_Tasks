@@ -15,8 +15,8 @@ public class MainAngleZad5 {
         System.out.println(Math.toDegrees(Math.acos(-0.5)));
         System.out.println(Math.toDegrees(Math.atan(0)));
         System.out.println(Math.toDegrees(Math.PI / 2 - Math.atan(0)));
-        System.out.println(" arsecans = " + Math.toDegrees(Math.acos(1.0d / 2.0d)));
-        System.out.println(" arcosecans = " + (Math.toDegrees(Math.asin(1.0d / 2.0d))));
+        System.out.println("arsecans = " + Math.toDegrees(Math.acos(1.0d / 2.0d)));
+        System.out.println("arcosecans = " + (Math.toDegrees(Math.asin(1.0d / 2.0d))));
 
 
         // arcsin + arccos = PI/2 dla ka¿dego x nale¿¹cego do -1..1

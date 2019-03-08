@@ -1,8 +1,18 @@
 package angle;
 
+import java.math.BigDecimal;
+
 public class Angle {
 
     private double x;
+    public static final double RIGHT_ANGLE = Math.PI / 2;
+    public static final double STRAIGHT_ANGLE = Math.PI;
+    public static final double FULL_ANGLE = 2 * Math.PI;
+    public static final double RADIAN = 1;
+    public static final double DEGREE = Math.PI / 180;
+    public static final double ARC_MINUTE = (Math.PI / 180) / 60;
+    public static final double ARC_SECOND = (Math.PI / 180) / 3600;
+
 
     public Angle() {
     }
@@ -206,7 +216,12 @@ public class Angle {
     @Override
     public String toString() {
 
-        String degree = Double.toString((float) Math.toDegrees(x));
+        BigDecimal rounderVariable = new BigDecimal(Math.toDegrees(x));
+
+        if (!rounderVariable.equals(BigDecimal.valueOf(0))) { // zeby nie pisal 0E-10 itp.
+        rounderVariable =rounderVariable.setScale(10, BigDecimal.ROUND_HALF_UP); }
+
+        String degree = rounderVariable.toString(); //Double.toString((float) Math.toDegrees(x));
         String degreeFinal = degree;
         String decimalPlaces = "";
         String minutesString = "0";
