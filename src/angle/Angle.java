@@ -145,6 +145,16 @@ public class Angle {
         this.x = angleValue >= 0 ? angleValue : angleValue + 2 * Math.PI;
     }
 
+    public Angle add(Angle objectAngle) {
+        double addedAngle = this.getAngle() + objectAngle.getAngle();
+        return new Angle(addedAngle);
+    }
+
+    public Angle sub(Angle objectAngle) {
+        double addedAngle = this.getAngle() - objectAngle.getAngle();
+        return new Angle(addedAngle);
+    }
+
     @Override
     public String toString() {
 
