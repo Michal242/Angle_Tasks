@@ -276,6 +276,16 @@ public class Angle {
         return new Angle(angleToReturn);
     }
 
+    public static Angle add(Angle objectAngle1, Angle objectAngle2) {
+        double angleToReturn = objectAngle1.getAngle() + objectAngle2.getAngle();
+        return new Angle(angleToReturn);
+    }
+
+    public static Angle diff(Angle objectAngle1, Angle objectAngle2) {
+        double angleToReturn = objectAngle1.getAngle() - objectAngle2.getAngle();
+        return new Angle(angleToReturn);
+    }
+
 
 }
 
