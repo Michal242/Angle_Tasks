@@ -185,6 +185,23 @@ public class Angle {
         return new Angle(dividedAngle);
     }
 
+    public Angle prod(Angle angleObject, double number) {
+
+        double resultAngle = angleObject.getAngle() * number;
+
+        return new Angle(resultAngle);
+    }
+
+    public Angle quot(Angle angleObject, double number) {
+
+        if (number == 0) {
+            throw new ArithmeticException("Próba dzielenia przez 0!!!");
+        }
+
+        double resultAngle = angleObject.getAngle() / number;
+        return new Angle(resultAngle);
+    }
+
 
     @Override
     public String toString() {
