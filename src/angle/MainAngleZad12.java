@@ -6,15 +6,15 @@ public class MainAngleZad12 {
 
         Angle angle = new Angle(Math.PI);
 
-        // ------ metody mno¿¹ce ------
+        // ------ metody mnoÅ¼Ä…ce ------
 
-        System.out.println(" ------------------------------ Metody mno¿¹ce ----------");
+        System.out.println(" ------------------------------ Metody mnoÅ¼Ä…ce ----------");
 
 
-        System.out.println("Wartoœæ bazowa k¹ta;");
+        System.out.println("WartoÅ›Ä‡ bazowa kÄ…ta;");
         System.out.println("angle : " + " radians [" + angle.radian() + "] ,degrees [" + angle.degree() + "]");
         System.out.println();
-        System.out.println("Wywo³anie metody mno¿¹cej przez liczbê ca³kowit¹ angle.mult(2) - powstaje nowy obiekt Angle");
+        System.out.println("WywoÅ‚anie metody mnoÅ¼Ä…cej przez liczbÄ™ caÅ‚kowitÄ… angle.mult(2) - powstaje nowy obiekt Angle");
 
         Angle angleMultiplied = angle.mult(2);
         System.out.println("angleMultiplied: " + angleMultiplied);
@@ -22,10 +22,10 @@ public class MainAngleZad12 {
         System.out.println("Radians " + angleMultiplied.radian());
         System.out.println();
 
-        System.out.println("Wartoœæ bazowa k¹ta;");
+        System.out.println("WartoÅ›Ä‡ bazowa kÄ…ta;");
         System.out.println("angle : " + " radians [" + angle.radian() + "] ,degrees [" + angle.degree() + "]");
         System.out.println();
-        System.out.println("Wywo³anie metody mno¿¹cej przez liczbê zmiennoprzecinkow¹ angle.mult(0.125) - powstaje nowy obiekt Angle");
+        System.out.println("WywoÅ‚anie metody mnoÅ¼Ä…cej przez liczbÄ™ zmiennoprzecinkowÄ… angle.mult(0.125) - powstaje nowy obiekt Angle");
 
 
 
@@ -35,14 +35,14 @@ public class MainAngleZad12 {
         System.out.println("Degrees : " + angleMultipliedDouble.degree());
         System.out.println("Radians : " + angleMultipliedDouble.radian());
         System.out.println();
-        System.out.println(" ------------------------------ Metody dziel¹ce ----------");
+        System.out.println(" ------------------------------ Metody dzielÄ…ce ----------");
 
-        // ------ metody dziel¹ce -------
+        // ------ metody dzielÄ…ce -------
 
-        System.out.println("Wartoœæ bazowa k¹ta;");
+        System.out.println("WartoÅ›Ä‡ bazowa kÄ…ta;");
         System.out.println("angle : " + " radians [" + angle.radian() + "] ,degrees [" + angle.degree() + "]");
         System.out.println();
-        System.out.println("Wywo³anie metody dziel¹cej przez liczbê ca³kowit¹ angle.div(2) - powstaje nowy obiekt Angle");
+        System.out.println("WywoÅ‚anie metody dzielÄ…cej przez liczbÄ™ caÅ‚kowitÄ… angle.div(2) - powstaje nowy obiekt Angle");
 
         Angle angleDivided = angle.div(2);
         System.out.println("angleDivided: " + angleDivided);
@@ -50,10 +50,10 @@ public class MainAngleZad12 {
         System.out.println("Radians " + angleDivided.radian());
         System.out.println();
 
-        System.out.println("Wartoœæ bazowa k¹ta;");
+        System.out.println("WartoÅ›Ä‡ bazowa kÄ…ta;");
         System.out.println("angle : " + " radians [" + angle.radian() + "] ,degrees [" + angle.degree() + "]");
         System.out.println();
-        System.out.println("Wywo³anie metody dziel¹cej przez liczbê zmiennoprzecinkow¹ angle.div(0.125) - powstaje nowy obiekt Angle");
+        System.out.println("WywoÅ‚anie metody dzielÄ…cej przez liczbÄ™ zmiennoprzecinkowÄ… angle.div(0.125) - powstaje nowy obiekt Angle");
 
         Angle angleDividedDouble = angle.div(1.125345);
         System.out.println("angleDividedDouble: " + angleDividedDouble);

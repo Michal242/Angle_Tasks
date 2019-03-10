@@ -6,7 +6,7 @@ public class MainANgleZad6 {
 
 
         Angle angle = new Angle(20, 15, 10);
-        System.out.println("K¹t bazowy:");
+        System.out.println("KÄ…t bazowy:");
         System.out.println(angle);
         System.out.println();
 

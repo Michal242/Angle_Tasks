@@ -7,11 +7,11 @@ public class MainAngleZad11 {
         Angle angleFirst = new Angle(Math.PI);
         Angle angleSecond = new Angle(2 * Math.PI);
 
-        System.out.println("Wartoúci bazowe kπtÛw;");
+        System.out.println("Warto≈õci bazowe kƒÖt√≥w;");
         System.out.println("AngleFirst : " + " radians [" + angleFirst.radian() + "] ,degrees [" + angleFirst.degree() + "]");
         System.out.println("AngleSecond : " + " radians [" + angleSecond.radian() + "] ,degrees [" + angleSecond.degree() + "]");
         System.out.println();
-        System.out.println("Wywo≥anie statycznej metody dodawania Angle.add() - powstaje nowy obiekt Angle angleAdded");
+        System.out.println("Wywo≈Çanie statycznej metody dodawania Angle.add() - powstaje nowy obiekt Angle angleAdded");
 
 
         Angle angleAdded = Angle.add(angleFirst, angleSecond);
@@ -19,7 +19,7 @@ public class MainAngleZad11 {
         System.out.println("angleAdded : " + " radians [" + angleAdded.radian() + "] ,degrees [" + angleAdded.degree() + "]");
 
         System.out.println();
-        System.out.println("Wywo≥anie statycznej metody odejmowania Angle.diff() - powstaje nowy obiekt Angle angleSubtracted");
+        System.out.println("Wywo≈Çanie statycznej metody odejmowania Angle.diff() - powstaje nowy obiekt Angle angleSubtracted");
         Angle angleSubtratcted = Angle.diff(angleFirst, angleSecond);
         System.out.println(angleSubtratcted);
         System.out.println("angleAdded : " + " radians [" + angleSubtratcted.radian() + "] ,degrees [" + angleSubtratcted.degree() + "]");

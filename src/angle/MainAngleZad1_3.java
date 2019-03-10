@@ -8,9 +8,9 @@ public class MainAngleZad1_3 {
         Angle angle2 = new Angle(180,15,1);
 
         double angleValueRad = angle.getAngle();
-        System.out.println("K¹t w radianach: " + angle.radian());
-        System.out.println("K¹t w stopniach: " + angle.degree());
-        System.out.println("\nWartoœci wybranych funkcji trygonometrycznych.\n");
+        System.out.println("KÄ…t w radianach: " + angle.radian());
+        System.out.println("KÄ…t w stopniach: " + angle.degree());
+        System.out.println("\nWartoÅ›ci wybranych funkcji trygonometrycznych.\n");
         System.out.printf("Sinus(%.2f) = %.4f\n", angleValueRad, angle.getAngleSinus());
         System.out.printf("Cosinus(%.2f) = %.4f\n", angleValueRad, angle.getAngleCosiunus());
         System.out.printf("Tangens(%.2f) = %.4f\n", angleValueRad, angle.getAngleTangens());
@@ -20,9 +20,9 @@ public class MainAngleZad1_3 {
 
         System.out.println(angle);
 
-        System.out.println("K¹t w radianach: " + angle2.radian());
-        System.out.println("K¹t w stopniach: " + angle2.degree());
-        System.out.println("\nWartoœci wybranych funkcji trygonometrycznych.\n");
+        System.out.println("KÄ…t w radianach: " + angle2.radian());
+        System.out.println("KÄ…t w stopniach: " + angle2.degree());
+        System.out.println("\nWartoÅ›ci wybranych funkcji trygonometrycznych.\n");
         System.out.printf("Sinus(%.2f) = %.4f\n", angleValueRad, angle2.getAngleSinus());
         System.out.printf("Cosinus(%.2f) = %.4f\n", angleValueRad, angle2.getAngleCosiunus());
         System.out.printf("Tangens(%.2f) = %.4f\n", angleValueRad, angle2.getAngleTangens());

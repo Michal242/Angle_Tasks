@@ -24,13 +24,13 @@ public class Angle {
     public Angle(int degree, int minutes, int seconds) {
 
         if (degree < 0 || degree > 360) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ k¹ta. Podaj liczbê z zakresu 0-360!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ kÄ…ta. Podaj liczbÄ™ z zakresu 0-360!");
         }
         if (minutes < 0 || minutes > 60) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ minut. Podaj liczbê z zakresu 0-60!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ minut. Podaj liczbÄ™ z zakresu 0-60!");
         }
         if (seconds < 0 || seconds > 60) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ sekund. Podaj liczbê z zakresu 0-60!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ sekund. Podaj liczbÄ™ z zakresu 0-60!");
         }
 
         x = Math.toRadians(degree + minutes / 60.0 + seconds / 3600.0);
@@ -39,10 +39,10 @@ public class Angle {
     public Angle(int degree, int minutes) {
 
         if (degree < 0 || degree > 360) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ k¹ta. Podaj liczbê z zakresu 0-360!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ kÄ…ta. Podaj liczbÄ™ z zakresu 0-360!");
         }
         if (minutes < 0 || minutes > 60) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ minut. Podaj liczbê z zakresu 0-60!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ minut. Podaj liczbÄ™ z zakresu 0-60!");
         }
 
         x = Math.toRadians(degree + minutes / 60.0);
@@ -52,14 +52,14 @@ public class Angle {
     public Angle(int degree) {
 
         if (degree < 0 || degree > 360) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ k¹ta. Podaj liczbê z zakresu 0-360!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ kÄ…ta. Podaj liczbÄ™ z zakresu 0-360!");
         }
 
         x = Math.toRadians(degree);
 
     }
 
-    //105°30'15"
+    //105Â°30'15"
 
     public Angle(String angle) {
 
@@ -67,8 +67,8 @@ public class Angle {
         String strMinutes = "0";
         String strSeconds = "0";
 
-        strDegrees = angle.substring(0, angle.indexOf('°'));
-        strMinutes = angle.substring(angle.indexOf('°') + 1, angle.indexOf('\''));
+        strDegrees = angle.substring(0, angle.indexOf('Â°'));
+        strMinutes = angle.substring(angle.indexOf('Â°') + 1, angle.indexOf('\''));
         strSeconds = angle.substring(angle.indexOf('\'') + 1, angle.indexOf('\"'));
 
         double degrees = Double.parseDouble(strDegrees);
@@ -179,7 +179,7 @@ public class Angle {
 
         double dividedAngle = x / number;
         if (number == 0) {
-            throw new ArithmeticException("Próba dzielenia przez 0!!!");
+            throw new ArithmeticException("PrÃ³ba dzielenia przez 0!!!");
         }
         return new Angle(dividedAngle);
     }
@@ -187,7 +187,7 @@ public class Angle {
     public Angle div(double number) {
 
         if (number == 0) {
-            throw new ArithmeticException("Próba dzielenia przez 0!!!");
+            throw new ArithmeticException("PrÃ³ba dzielenia przez 0!!!");
         }
 
         double dividedAngle = x / number;
@@ -205,7 +205,7 @@ public class Angle {
     public Angle quot(Angle angleObject, double number) {
 
         if (number == 0) {
-            throw new ArithmeticException("Próba dzielenia przez 0!!!");
+            throw new ArithmeticException("PrÃ³ba dzielenia przez 0!!!");
         }
 
         double resultAngle = angleObject.getAngle() / number;
@@ -229,42 +229,42 @@ public class Angle {
         double minutes = 0.0;
         double seconds = 0.0;
 
-        /* sprawdzenie czy stopnie s¹ liczb¹ zmiennoprzecinkow¹, je¿eli tak to
+        /* sprawdzenie czy stopnie sÄ… liczbÄ… zmiennoprzecinkowÄ…, jeÅ¼eli tak to
             wykonanie odpowiednich kalkulacji w celu wydobycia minut i sekund,
-            jeœli nie stopnie zostaj¹ tak ja s¹.
+            jeÅ›li nie stopnie zostajÄ… tak ja sÄ….
         */
 
         if (degree.contains(".")) {
             // ------- Obliczenie samych stopni ------
 
-            // wytnij i wez wszysko z przed '.' to bêd¹ stopnie
+            // wytnij i wez wszysko z przed '.' to bÄ™dÄ… stopnie
 
             degreeFinal = degree.substring(0, degree.indexOf("."));
 
-            // ------ Obliczenie pzosta³ych minut ------
+            // ------ Obliczenie pzostaÅ‚ych minut ------
 
-            // wez wszystko za kropk¹ (ze stopni), nastêpnie dodaj '0.' przed, otrzymamy czêœæ
-            // u³amkow¹, nastepnie przemnozymy przez 60 i otrzymamy minuty
+            // wez wszystko za kropkÄ… (ze stopni), nastÄ™pnie dodaj '0.' przed, otrzymamy czÄ™Å›Ä‡
+            // uÅ‚amkowÄ…, nastepnie przemnozymy przez 60 i otrzymamy minuty
 
             decimalPlaces = degree.substring(degree.indexOf(".") + 1);
             minutes = Double.parseDouble("0." + decimalPlaces) * 60.0;
             minutesString = String.valueOf(minutes);
 
-            // ------ Obliczenie pzosta³ych sekund ------
+            // ------ Obliczenie pzostaÅ‚ych sekund ------
 
-            // wez wszystko za kropk¹ (z minut), nastêpnie dodaj '0.' przed, otrzymamy czêœæ
-            // u³amkow¹, nastepnie przemnozymy przez 60 i otrzymamy sekundy, wynik zaokr¹glamy
-            // bo nie potrzebujemy czêœci u³¹mkowej z sekund ju¿ do niczego.
+            // wez wszystko za kropkÄ… (z minut), nastÄ™pnie dodaj '0.' przed, otrzymamy czÄ™Å›Ä‡
+            // uÅ‚amkowÄ…, nastepnie przemnozymy przez 60 i otrzymamy sekundy, wynik zaokrÄ…glamy
+            // bo nie potrzebujemy czÄ™Å›ci uÅ‚Ä…mkowej z sekund juÅ¼ do niczego.
 
             decimalPlaces = minutesString.substring(minutesString.indexOf(".") + 1);
             seconds = Double.parseDouble("0." + decimalPlaces) * 60;
             secondsString = String.valueOf(Math.round(seconds));
 
-            // tu odrzuæ jeszcze czêœæ u³amkow¹ z minut, bierz tylko ca³kowite wartoœci,
-            //    reszta (czêœæ u³amkowa) zosta³a przekonwertowana na sekundy
+            // tu odrzuÄ‡ jeszcze czÄ™Å›Ä‡ uÅ‚amkowÄ… z minut, bierz tylko caÅ‚kowite wartoÅ›ci,
+            //    reszta (czÄ™Å›Ä‡ uÅ‚amkowa) zostaÅ‚a przekonwertowana na sekundy
             minutesString = minutesString.substring(0, minutesString.indexOf("."));
         }
-        return "K¹t = " + degreeFinal + "° " + minutesString + "' " + secondsString + "\"";
+        return "KÄ…t = " + degreeFinal + "Â° " + minutesString + "' " + secondsString + "\"";
 
     }
 
@@ -276,13 +276,13 @@ public class Angle {
     public static Angle valueOf(int degree, int minutes, int seconds) {
 
         if (degree < 0 || degree > 360) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ k¹ta. Podaj liczbê z zakresu 0-360!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ kÄ…ta. Podaj liczbÄ™ z zakresu 0-360!");
         }
         if (minutes < 0 || minutes > 60) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ minut. Podaj liczbê z zakresu 0-60!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ minut. Podaj liczbÄ™ z zakresu 0-60!");
         }
         if (seconds < 0 || seconds > 60) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ sekund. Podaj liczbê z zakresu 0-60!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ sekund. Podaj liczbÄ™ z zakresu 0-60!");
         }
 
         double angleValue = Math.toRadians(degree + minutes / 60.0 + seconds / 3600.0);
@@ -292,10 +292,10 @@ public class Angle {
     public static Angle valueOf(int degree, int minutes) {
 
         if (degree < 0 || degree > 360) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ k¹ta. Podaj liczbê z zakresu 0-360!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ kÄ…ta. Podaj liczbÄ™ z zakresu 0-360!");
         }
         if (minutes < 0 || minutes > 60) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ minut. Podaj liczbê z zakresu 0-60!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ minut. Podaj liczbÄ™ z zakresu 0-60!");
         }
 
         double angleValue = Math.toRadians(degree + minutes / 60.0);
@@ -306,7 +306,7 @@ public class Angle {
     public static Angle valueOf(int degree) {
 
         if (degree < 0 || degree > 360) {
-            throw new IllegalArgumentException("Podano z³¹ wartoœæ k¹ta. Podaj liczbê z zakresu 0-360!");
+            throw new IllegalArgumentException("Podano zÅ‚Ä… wartoÅ›Ä‡ kÄ…ta. Podaj liczbÄ™ z zakresu 0-360!");
         }
 
         double angleValue = Math.toRadians(degree);
@@ -319,8 +319,8 @@ public class Angle {
         String strMinutes = "0";
         String strSeconds = "0";
 
-        strDegrees = angle.substring(0, angle.indexOf('°'));
-        strMinutes = angle.substring(angle.indexOf('°') + 1, angle.indexOf('\''));
+        strDegrees = angle.substring(0, angle.indexOf('Â°'));
+        strMinutes = angle.substring(angle.indexOf('Â°') + 1, angle.indexOf('\''));
         strSeconds = angle.substring(angle.indexOf('\'') + 1, angle.indexOf('\"'));
 
         double degrees = Double.parseDouble(strDegrees);

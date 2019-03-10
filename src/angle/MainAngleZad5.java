@@ -4,11 +4,11 @@ public class MainAngleZad5 {
 
     public static void main(String[] args) {
 
-        Angle angle = new Angle("90°30'30\"");
+        Angle angle = new Angle("90Â°30'30\"");
 
         System.out.println();
-        System.out.println("K¹t w radianach: " + angle.radian());
-        System.out.println("K¹t w stopniach: " + angle.degree());
+        System.out.println("KÄ…t w radianach: " + angle.radian());
+        System.out.println("KÄ…t w stopniach: " + angle.degree());
         System.out.println(angle);
 
         System.out.println(Math.toDegrees(Math.asin(1)));
@@ -19,8 +19,8 @@ public class MainAngleZad5 {
         System.out.println("arcosecans = " + (Math.toDegrees(Math.asin(1.0d / 2.0d))));
 
 
-        // arcsin + arccos = PI/2 dla ka¿dego x nale¿¹cego do -1..1
-        // arctg + arcctg = PI/2 dla ka¿dego x nale¿¹cego do R
+        // arcsin + arccos = PI/2 dla kaÅ¼dego x naleÅ¼Ä…cego do -1..1
+        // arctg + arcctg = PI/2 dla kaÅ¼dego x naleÅ¼Ä…cego do R
         // tg x = sinx / cosx
         // ctg x = cosx / sinx
         // ar secans 1/x = arcos x , arcos 1/x = ar secans x
@@ -29,7 +29,7 @@ public class MainAngleZad5 {
         /*
         sec z = 1 / cos z
 csc z = 1 / sin z
-³ó¿eczko z = 1 / tan z
+Å‚Ã³Å¼eczko z = 1 / tan z
 asec z = acos 1 / z
 acsc z = acos 1 / z
 acot z = atan 1 / z

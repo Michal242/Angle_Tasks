@@ -6,15 +6,15 @@ public class MainAngleZad13 {
 
         Angle angle = new Angle(Math.PI);
 
-        // ------ metody mno¿¹ce ------
+        // ------ metody mnoÅ¼Ä…ce ------
 
-        System.out.println(" ------------------------------ Metoda mno¿¹ca ----------");
+        System.out.println(" ------------------------------ Metoda mnoÅ¼Ä…ca ----------");
 
 
-        System.out.println("Wartoœæ bazowa k¹ta;");
+        System.out.println("WartoÅ›Ä‡ bazowa kÄ…ta;");
         System.out.println("angle : " + " radians [" + angle.radian() + "] ,degrees [" + angle.degree() + "]");
         System.out.println();
-        System.out.println("Wywo³anie metody mno¿¹cej przez liczbê angle.prod(angle, 2) np. 2 - powstaje nowy obiekt klasy Angle");
+        System.out.println("WywoÅ‚anie metody mnoÅ¼Ä…cej przez liczbÄ™ angle.prod(angle, 2) np. 2 - powstaje nowy obiekt klasy Angle");
 
         Angle angleMultipliedByNumber = angle.prod(angle,2);
         System.out.println("angleMultipliedByNumber: " + angleMultipliedByNumber);
@@ -24,14 +24,14 @@ public class MainAngleZad13 {
 
 
         System.out.println();
-        System.out.println(" ------------------------------ Metoda dziel¹ca ----------");
+        System.out.println(" ------------------------------ Metoda dzielÄ…ca ----------");
 
-        // ------ metody dziel¹ce -------
+        // ------ metody dzielÄ…ce -------
 
-        System.out.println("Wartoœæ bazowa k¹ta;");
+        System.out.println("WartoÅ›Ä‡ bazowa kÄ…ta;");
         System.out.println("angle : " + " radians [" + angle.radian() + "] ,degrees [" + angle.degree() + "]");
         System.out.println();
-        System.out.println("Wywo³anie metody dziel¹cej przez liczbê angle.quot(angle, 2) np. 2 - powstaje nowy obiekt klasy Angle");
+        System.out.println("WywoÅ‚anie metody dzielÄ…cej przez liczbÄ™ angle.quot(angle, 2) np. 2 - powstaje nowy obiekt klasy Angle");
 
         Angle angleDividedByNumber = angle.quot(angle,2.0);
         System.out.println("angleDivided: " + angleDividedByNumber);

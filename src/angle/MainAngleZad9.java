@@ -20,8 +20,8 @@ public class MainAngleZad9 {
         Angle objectAngle3 = Angle.valueOf(45);
         System.out.println(objectAngle3);
 
-        System.out.println("objectAngle4 = Angle.valueOf(\"90°30'30\"\")");
-        Angle objectAngle4 = Angle.valueOf("90°30'30\"");
+        System.out.println("objectAngle4 = Angle.valueOf(\"90Â°30'30\"\")");
+        Angle objectAngle4 = Angle.valueOf("90Â°30'30\"");
         System.out.println(objectAngle4);
 
 
